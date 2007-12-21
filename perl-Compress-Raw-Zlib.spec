@@ -13,6 +13,7 @@ Source0:	http://search.cpan.org/CPAN/authors/id/P/PM/PMQS/%{module}-%{version}.t
 Url:		http://search.cpan.org/dist/%{module}/
 BuildRequires:	perl-devel
 BuildRequires:	zlib-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Low-Level Interface to zlib compression library.
