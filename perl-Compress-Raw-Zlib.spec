@@ -1,7 +1,7 @@
 %define	module	Compress-Raw-Zlib
 %define	name	perl-%{module}
-%define	version	2.019
-%define	release	%mkrel 2
+%define	version	2.020
+%define	release	%mkrel 1
 
 Name:		%{name}
 Version:	%{version}
