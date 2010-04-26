@@ -1,5 +1,5 @@
 %define	upstream_name	 Compress-Raw-Zlib
-%define upstream_version 2.026
+%define upstream_version 2.027
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
