@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:    %mkrel 2
 
 Summary:	Low-Level Interface to zlib compression library
 License:	GPL+ or Artistic
@@ -26,7 +26,7 @@ Low-Level Interface to zlib compression library.
 %make
 
 %check
-%{__make} test
+%make test
 
 %clean 
 rm -rf %{buildroot}
