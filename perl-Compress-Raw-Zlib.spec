@@ -1,9 +1,9 @@
 %define	upstream_name	 Compress-Raw-Zlib
-%define upstream_version 2.030
+%define upstream_version 2.032
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 4
+Release:    %mkrel 1
 
 Summary:	Low-Level Interface to zlib compression library
 License:	GPL+ or Artistic
