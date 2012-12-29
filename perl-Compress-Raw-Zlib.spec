@@ -1,15 +1,15 @@
-%define	upstream_name		Compress-Raw-Zlib
-%define	upstream_version	2.059
+%define	modname	Compress-Raw-Zlib
+%define	modver	2.059
 
-Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
+Name:		perl-%{modname}
+Version:	%{perl_convert_version %{modver}}
 Release:	1
 
 Summary:	Low-Level Interface to zlib compression library
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://search.cpan.org/CPAN/authors/id/P/PM/PMQS/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		http://search.cpan.org/dist/%{modname}/
+Source0:	http://search.cpan.org/CPAN/authors/id/P/PM/PMQS/%{modname}-%{modver}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	pkgconfig(zlib)
@@ -18,7 +18,7 @@ BuildRequires:	pkgconfig(zlib)
 Low-Level Interface to zlib compression library.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{modname}-%{modver}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -36,9 +36,9 @@ perl Makefile.PL INSTALLDIRS=vendor
 %{perl_vendorarch}/Compress
 %{perl_vendorarch}/auto/Compress
 
-
 %changelog
 * Sat Dec 29 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 2.59.0-1
+- cleanups
 - new version
 
 * Tue Mar 13 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 2.49.0-1
