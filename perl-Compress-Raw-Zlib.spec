@@ -1,5 +1,5 @@
 %define	modname	Compress-Raw-Zlib
-%define	modver	2.060
+%define	modver	2.061
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
@@ -19,6 +19,9 @@ Low-Level Interface to zlib compression library.
 
 %prep
 %setup -q -n %{modname}-%{modver}
+# Leaving the unused zlib source in the tree causes its zlib.h to be preferred
+# over the system version we want.
+rm -rf zlib-src
 
 %build
 BUILD_ZLIB=False perl Makefile.PL INSTALLDIRS=vendor

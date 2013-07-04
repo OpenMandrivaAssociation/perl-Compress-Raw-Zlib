@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   Compress-Raw-Zlib-2.060.tar.gz: 25d03dd47a209aa280a4ce6bf815bace6471ab54
+sources:
+  Compress-Raw-Zlib-2.061.tar.gz: 921242d3b966d86164911e9bc58e5f97b80ad27b
