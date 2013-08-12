@@ -1,5 +1,5 @@
 %define	modname	Compress-Raw-Zlib
-%define	modver	2.061
+%define	modver	2.062
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
