@@ -1,5 +1,5 @@
 %define	modname	Compress-Raw-Zlib
-%define	upstream_version	2.063
+%define upstream_version 2.065
 
 Summary:	Low-Level Interface to zlib compression library
 Name:		perl-%{modname}
@@ -8,7 +8,7 @@ Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}/
-Source0:	http://search.cpan.org/CPAN/authors/id/P/PM/PMQS/%{modname}-%{upstream_version}.tar.gz
+Source0:	http://search.cpan.org/CPAN/authors/id/P/PM/PMQS/Compress-Raw-Zlib-%{upstream_version}.tar.gz
 BuildRequires:	perl-devel
 BuildRequires:	pkgconfig(zlib)
 
@@ -36,4 +36,5 @@ BUILD_ZLIB=False perl Makefile.PL INSTALLDIRS=vendor
 %{perl_vendorarch}/Compress
 %{perl_vendorarch}/auto/Compress
 %{_mandir}/man3/*
+
 
