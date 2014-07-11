@@ -4,7 +4,7 @@
 Summary:	Low-Level Interface to zlib compression library
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	3
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}/
