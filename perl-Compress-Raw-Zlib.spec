@@ -1,5 +1,5 @@
 %define	modname	Compress-Raw-Zlib
-%define upstream_version 2.081
+%define upstream_version 2.100
 
 Summary:	Low-Level Interface to zlib compression library
 Name:		perl-%{modname}
