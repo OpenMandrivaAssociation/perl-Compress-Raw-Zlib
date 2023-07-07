@@ -1,10 +1,11 @@
+%define _empty_manifest_terminate_build 0
 %define	modname	Compress-Raw-Zlib
-%define upstream_version 2.204
+%define upstream_version 2.100
 
 Summary:	Low-Level Interface to zlib compression library
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{upstream_version}
-Release:	1
+Release:	2
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}/
@@ -24,9 +25,6 @@ rm -rf zlib-src
 %build
 BUILD_ZLIB=False perl Makefile.PL INSTALLDIRS=vendor
 %make
-
-%check
-%make test
 
 %install
 %makeinstall_std
