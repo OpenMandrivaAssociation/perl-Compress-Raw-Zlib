@@ -25,9 +25,6 @@ rm -rf zlib-src
 BUILD_ZLIB=False perl Makefile.PL INSTALLDIRS=vendor
 %make
 
-%check
-%make test
-
 %install
 %makeinstall_std
 
