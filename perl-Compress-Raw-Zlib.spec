@@ -1,14 +1,15 @@
+%undefine _debugsource_packages
 %define	modname	Compress-Raw-Zlib
-%define upstream_version 2.204
 
 Summary:	Low-Level Interface to zlib compression library
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{upstream_version}
+Version:	2.204
 Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}/
-Source0:	http://search.cpan.org/CPAN/authors/id/P/PM/PMQS/%{modname}-%{upstream_version}.tar.gz
+Source0:	http://search.cpan.org/CPAN/authors/id/P/PM/PMQS/%{modname}-%{version}.tar.gz
+Patch0:		perl-Compress-Raw-Zlib-2.204-compile.patch
 BuildRequires:	perl-devel
 BuildRequires:	pkgconfig(zlib)
 
@@ -16,20 +17,20 @@ BuildRequires:	pkgconfig(zlib)
 Low-Level Interface to zlib compression library.
 
 %prep
-%setup -qn %{modname}-%{upstream_version}
+%autosetup -p1 -n %{modname}-%{version}
 # Leaving the unused zlib source in the tree causes its zlib.h to be preferred
 # over the system version we want.
 rm -rf zlib-src
 
 %build
 BUILD_ZLIB=False perl Makefile.PL INSTALLDIRS=vendor
-%make
+%make_build
 
 %check
-%make test
+%make_build test
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc README Changes

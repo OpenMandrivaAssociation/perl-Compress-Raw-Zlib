@@ -1,0 +1,13 @@
+diff -up Compress-Raw-Zlib-2.204/Zlib.xs.omv~ Compress-Raw-Zlib-2.204/Zlib.xs
+--- Compress-Raw-Zlib-2.204/Zlib.xs.omv~	2023-07-08 21:42:05.260443910 +0200
++++ Compress-Raw-Zlib-2.204/Zlib.xs	2023-07-08 21:42:23.190340408 +0200
+@@ -37,6 +37,9 @@
+ #  include "zlib.h"
+ #endif
+ 
++// Perl expects an integer (0xF), but it's actually just an F...
++#undef ZLIBNG_VER_STATUS
++#define ZLIBNG_VER_STATUS 0xf
+ 
+ /* zlib prior to 1.06 doesn't know about z_off_t */
+ #ifndef z_off_t
